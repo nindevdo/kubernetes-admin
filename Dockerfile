@@ -2,6 +2,7 @@ FROM manjarolinux/base as helmsman
 
 RUN pacman -S --noconfirm --needed git base-devel yay
 
+
 # Create a user for yay to use as non root to install AUR packages
 RUN useradd --system --create-home helmsman \
   && echo 'ALL ALL = (ALL) NOPASSWD: ALL' >> /etc/sudoers \
