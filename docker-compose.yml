@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  helmsman:
+    build:
+      context: .
+      target: helmsman
+    container_name: helmsman
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+    entrypoint: /bin/bash
+    volumes:
+      - ${PWD}:/helmsman
+    tty: true
+    working_dir: /helmsman

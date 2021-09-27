@@ -3,3 +3,6 @@ A repository and place you can use to administer kubernetes with all of the late
 
 # Distro Choice
 Here at nindevdo we just happen to like manjaro linux for things like tools so that's what we're using. You could use alpine and all that but manjaro is what we chose because it's fun.
+
+# Create a cluster
+`eksctl create cluster --config-file eksctl.yml`
